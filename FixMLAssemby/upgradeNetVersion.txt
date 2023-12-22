@@ -1,0 +1,45 @@
+using MongoDB.Driver;
+using System.IO;
+using System.Linq;
+using System.Xml;
+
+namespace Test
+{
+	class Program
+    {
+        
+        static void Main(string[] args)
+        {
+			//upgradeFramework(@"D:\Projects\ML", "v4.5.2");
+			upgradeFramework(@"D:\Projects\CMSM\Source\trunk", "v4.5.2");
+		}
+
+		private static void upgradeFramework(string rootPath, string toVersion)
+		{
+			foreach (var projectFile in Directory.GetFiles(rootPath, "*.csproj", SearchOption.AllDirectories))
+			{
+				var doc = new XmlDocument();
+				doc.Load(projectFile);
+
+				var propertyGroup = doc.DocumentElement.Cast<XmlNode>().FirstOrDefault(n => n.Name == "PropertyGroup" && n.ChildNodes.Cast<XmlNode>().Any(cn => cn.Name == "TargetFrameworkVersion"));
+				if (propertyGroup == null)
+				{
+					continue;
+				}
+
+				var targetFrameworkVersion = propertyGroup.ChildNodes.Cast<XmlNode>().FirstOrDefault(n => n.Name == "TargetFrameworkVersion");
+				if (targetFrameworkVersion == null)
+				{
+					continue;
+				}
+
+				var version = targetFrameworkVersion.InnerText.Trim();
+				if (version.CompareTo(toVersion) == -1)
+				{
+					targetFrameworkVersion.InnerText = toVersion;
+					doc.Save(projectFile);
+				}
+			}
+		}
+    }
+}

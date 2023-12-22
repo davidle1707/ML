@@ -1,0 +1,6 @@
+https://github.com/structuremap
+
+http://benfoster.io/blog/per-request-dependencies-in-aspnet-web-api-using-structuremap
+http://ignipro.blogspot.com/2012/09/structuremap-scopes-and-life-cycles.html
+https://www.khalidabuhakmeh.com/utilizing-structuremap-3-with-asp-net-mvc
+https://crosscuttingconcerns.com/StructureMap-and-Dapper-Scoping-and-Lifecycle

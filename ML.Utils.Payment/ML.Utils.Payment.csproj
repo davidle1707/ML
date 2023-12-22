@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF8B55D0-0395-4EC0-BD7B-AC5E92478111}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ML.Utils.Payment</RootNamespace>
+    <AssemblyName>ML.Utils.Payment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AuthorizeNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\AuthorizeNet.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPal, Version=1.7.2.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\PaypalSDK\1.8.0\PayPal.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\References\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizeNet\Enums.cs" />
+    <Compile Include="AuthorizeNet\PaymentRequest.cs" />
+    <Compile Include="AuthorizeNet\PaymentResponse.cs" />
+    <Compile Include="AuthorizeNet\AuthorizeNetProcessor.cs" />
+    <Compile Include="AuthorizeNet\AuthorizeNetSetting.cs" />
+    <Compile Include="BaseClass.cs" />
+    <Compile Include="FirstData\FirstDataHttpService.cs" />
+    <Compile Include="FirstData\IFirstDataProcessor.cs" />
+    <Compile Include="Optimal\OptimalProcessor.cs" />
+    <Compile Include="Optimal\OptimalRequest.cs" />
+    <Compile Include="Optimal\OptimalResponse.cs" />
+    <Compile Include="Optimal\OptimalSetting.cs" />
+    <Compile Include="Optimal\OptimalUtility.cs" />
+    <Compile Include="Paypal\ExecutePaymentResponse.cs" />
+    <Compile Include="Paypal\PayoutRequest.cs" />
+    <Compile Include="Paypal\PaypalProcessor.cs" />
+    <Compile Include="Paypal\PaypalSetting.cs" />
+    <Compile Include="Paypal\Enums.cs" />
+    <Compile Include="Paypal\PaymentRequest.cs" />
+    <Compile Include="Paypal\PaymentResponse.cs" />
+    <Compile Include="PayZang\PaymentRequest.cs" />
+    <Compile Include="PayZang\PaymentResponse.cs" />
+    <Compile Include="PayZang\PayZangProcessor.cs" />
+    <Compile Include="PayZang\PayZangSetting.cs" />
+    <Compile Include="PrismPay\PrismPayProcessor.cs" />
+    <Compile Include="PrismPay\PrismPaySetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PrismPayAPI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Trans2PayAPI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FirstDataAPI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Trans2Pay\Info\ClientInfo.cs" />
+    <Compile Include="Trans2Pay\Info\DebitInfo.cs" />
+    <Compile Include="Trans2Pay\Info\NoteInfo.cs" />
+    <Compile Include="Trans2Pay\Info\PayeeInfo.cs" />
+    <Compile Include="Trans2Pay\Info\PaymentInfo.cs" />
+    <Compile Include="Trans2Pay\Trans2PayException.cs" />
+    <Compile Include="Trans2Pay\Enums.cs" />
+    <Compile Include="Trans2Pay\Trans2PayProcessor.cs" />
+    <Compile Include="Trans2Pay\Trans2PaySetting.cs" />
+    <Compile Include="TransNational\Enums.cs" />
+    <Compile Include="TransNational\PaymentRequest.cs" />
+    <Compile Include="TransNational\PaymentResponse.cs" />
+    <Compile Include="TransNational\TransNationalProcessor.cs" />
+    <Compile Include="TransNational\TransNationalSetting.cs" />
+    <Compile Include="FirstData\Enums.cs" />
+    <Compile Include="FirstData\FirstDataBehaviour.cs" />
+    <Compile Include="FirstData\FirstDataProcessor.cs" />
+    <Compile Include="FirstData\FirstDataSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processAccountLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.ProcessAccountLookupResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processACHCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processACHSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processACHVerificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processAuthReverseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processC21CreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processC21ICLCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processC21ICLSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processC21ICLVoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processC21SaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processC21VoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCAuthenticationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCAuthsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCCreditsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCProfileAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCSalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCCVoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCKProfileAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitPinlessCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitPinlessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitPostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitReturnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitReturnsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitSalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processDebitVoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTBalanceInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTCashBenefitBalanceInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTCashBenefitReturnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTCashBenefitSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTCashBenefitWithdrawalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTFoodStampBalanceInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTFoodStampReturnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTFoodStampSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTFoodStampVoucherSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processEBTVoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processExtACHConsumerDisbursementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processExtACHCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processExtACHProfileAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processExtACHSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processExtACHVoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processIncrementalAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processProfileCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processProfileDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.ProcessProfileResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processProfileRetrieveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processProfileSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processProfileUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processRecurAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processRecurCancelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processRecurRetrieveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.ProcessRecurRetrieveResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processRecurUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.ProcessResults.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processSVAddValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processSVBalanceInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processSVDeactivateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processSVIssueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processSVRefundResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processSVSaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processTransRetrieveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\ML.Utils.Payment.PrismPayAPI.processVoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrismPayAPI\TransactionService.wsdl" />
+    <None Include="Service References\Trans2PayAPI\AccountsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\BankAccountTypesWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\BankHolidaysWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\BanksWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\ClientsListWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\ClientsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\DebitInfoWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\DebitsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\DepositsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.AccountsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.BankAccountTypesWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.BankHolidaysWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.BanksWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.ClientsListWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.ClientsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.DebitInfoWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.DebitsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.DepositsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.NotesWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.NsfStatusWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.PayeesListWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.PayeesWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.PaymentInfoWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.PaymentsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.PolicyGroupsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.PreValidationsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.StatesWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\ML.Utils.Payment.Trans2PayAPI.TransactionsWSDS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Trans2PayAPI\NotesWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\NsfStatusWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\PayeesListWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\PayeesWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\PaymentInfoWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\PaymentsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\PolicyGroupsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\PreValidationsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\StatesWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\TransactionsWSDS.xsd" />
+    <None Include="Service References\Trans2PayAPI\Webservices.wsdl" />
+    <None Include="Service References\FirstDataAPI\ML.Utils.Payment.FirstDataAPI.CheckTransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FirstDataAPI\ML.Utils.Payment.FirstDataAPI.TransactionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FirstDataAPI\wsdl.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PrismPayAPI\" />
+    <WCFMetadataStorage Include="Service References\Trans2PayAPI\" />
+    <WCFMetadataStorage Include="Service References\FirstDataAPI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Trans2PayAPI\Webservices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Trans2PayAPI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Trans2PayAPI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Trans2PayAPI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FirstDataAPI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FirstDataAPI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FirstDataAPI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrismPayAPI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrismPayAPI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrismPayAPI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ML.Common\ML.Common.csproj">
+      <Project>{c42a8f43-abe3-4ad2-9159-d06adfc1ebc2}</Project>
+      <Name>ML.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

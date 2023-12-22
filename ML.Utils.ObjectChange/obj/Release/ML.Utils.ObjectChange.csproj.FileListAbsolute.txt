@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.ObjectChange.dll
+D:\Project Git\ML\Build\ML.Utils.ObjectChange.pdb
+D:\Project Git\ML\ML.Utils.ObjectChange\obj\Release\ML.Utils.ObjectChange.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.ObjectChange\obj\Release\ML.Utils.ObjectChange.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.ObjectChange\obj\Release\ML.Utils.ObjectChange.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.ObjectChange\obj\Release\ML.Utils.ObjectChange.dll
+D:\Project Git\ML\ML.Utils.ObjectChange\obj\Release\ML.Utils.ObjectChange.pdb

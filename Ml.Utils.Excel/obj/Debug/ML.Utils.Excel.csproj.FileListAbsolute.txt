@@ -1,0 +1,8 @@
+D:\Project Git\ML\Build\ML.Utils.Excel.dll
+D:\Project Git\ML\Build\ML.Utils.Excel.pdb
+D:\Project Git\ML\ML.Utils.Excel\obj\Debug\ML.Utils.Excel.Csv.Resources.ExceptionMessage.resources
+D:\Project Git\ML\ML.Utils.Excel\obj\Debug\ML.Utils.Excel.csproj.GenerateResource.cache
+D:\Project Git\ML\ML.Utils.Excel\obj\Debug\ML.Utils.Excel.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Excel\obj\Debug\ML.Utils.Excel.dll
+D:\Project Git\ML\ML.Utils.Excel\obj\Debug\ML.Utils.Excel.pdb
+D:\Project Git\ML\ML.Utils.Excel\obj\Debug\ML.Utils.Excel.csprojResolveAssemblyReference.cache

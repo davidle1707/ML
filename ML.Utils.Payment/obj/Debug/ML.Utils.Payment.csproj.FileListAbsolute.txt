@@ -1,0 +1,8 @@
+D:\Project Git\ML\Build\ML.Utils.Payment.dll.config
+D:\Project Git\ML\Build\ML.Utils.Payment.dll
+D:\Project Git\ML\Build\ML.Utils.Payment.pdb
+D:\Project Git\ML\ML.Utils.Payment\obj\Debug\ML.Utils.Payment.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Payment\obj\Debug\ML.Utils.Payment.dll
+D:\Project Git\ML\ML.Utils.Payment\obj\Debug\ML.Utils.Payment.pdb
+D:\Project Git\ML\ML.Utils.Payment\obj\Debug\ML.Utils.Payment.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.Payment\obj\Debug\ML.Utils.Payment.csproj.CopyComplete

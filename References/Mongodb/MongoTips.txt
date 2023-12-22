@@ -1,0 +1,2 @@
+1. Change database buffer size (100MB): (default 32MB)
+db.adminCommand({setParameter: 1, internalQueryExecMaxBlockingSortBytes: 104857600})

@@ -1,0 +1,17 @@
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\ML.Utils.Pdf.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\ML.Utils.Pdf.pdb
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\itextsharp.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\itextsharp.v5510.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\itextsharp.v5510.xmlworker.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\log4net.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\ML.Common.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\MongoDB.Bson.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\Newtonsoft.Json.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\Microsoft.Win32.TaskScheduler.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\AutoMapper.dll
+D:\Project Git\ML\ML.Utils.Pdf\bin\Release\ML.Common.pdb
+D:\Project Git\ML\ML.Utils.Pdf\obj\Release\ML.Utils.Pdf.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.Pdf\obj\Release\ML.Utils.Pdf.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Pdf\obj\Release\ML.Utils.Pdf.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.Pdf\obj\Release\ML.Utils.Pdf.dll
+D:\Project Git\ML\ML.Utils.Pdf\obj\Release\ML.Utils.Pdf.pdb

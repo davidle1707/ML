@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Common.dll
+D:\Project Git\ML\Build\ML.Common.pdb
+D:\Project Git\ML\ML.Common\obj\Release\ML.Common.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Common\obj\Release\ML.Common.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Common\obj\Release\ML.Common.csproj.CopyComplete
+D:\Project Git\ML\ML.Common\obj\Release\ML.Common.dll
+D:\Project Git\ML\ML.Common\obj\Release\ML.Common.pdb

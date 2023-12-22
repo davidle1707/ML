@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.StructureMapService.dll
+D:\Project Git\ML\Build\ML.Utils.StructureMapService.pdb
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Release\ML.Utils.StructureMapService.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Release\ML.Utils.StructureMapService.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Release\ML.Utils.StructureMapService.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Release\ML.Utils.StructureMapService.dll
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Release\ML.Utils.StructureMapService.pdb

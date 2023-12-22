@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.ZipLookup.dll
+D:\Project Git\ML\Build\ML.Utils.ZipLookup.pdb
+D:\Project Git\ML\ML.Utils.ZipLookup\obj\Release\ML.Utils.ZipLookup.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.ZipLookup\obj\Release\ML.Utils.ZipLookup.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.ZipLookup\obj\Release\ML.Utils.ZipLookup.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.ZipLookup\obj\Release\ML.Utils.ZipLookup.dll
+D:\Project Git\ML\ML.Utils.ZipLookup\obj\Release\ML.Utils.ZipLookup.pdb

@@ -1,0 +1,3 @@
+- https://sharedcache.codeplex.com/
+- After install SharedCache, goto installed folder and change SharedCache.WinService.exe.config
+ + Remove replicatedServers: 192.168.212.50

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns="http://webservice.common.asl.locaid.net/" xmlns:tns="http://webservice.asl.locaid.net/RegistrationService" elementFormDefault="qualified" targetNamespace="http://webservice.asl.locaid.net/RegistrationService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="https://asl.loc-aid.com:443/ASLWS/RegistrationService?xsd=1" namespace="http://webservice.common.asl.locaid.net/" />
+  <xsd:element name="RegisterPhoneRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="credentials" type="ns:Credentials" />
+        <xsd:element name="appPhones" type="ns:RegistrationAppPhones" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RegisterPhoneResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="transactionResponse" type="ns:TransactionResponse" />
+        <xsd:element name="classId" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="phoneStatus" type="ns:PhoneStatus" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetPhoneStatusRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="credentials" type="ns:Credentials" />
+        <xsd:element maxOccurs="unbounded" name="msisdn" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetPhoneStatusResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="transactionResponse" type="ns:TransactionResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="msisdnPhoneStatus" type="ns:MsisdnPhoneStatus" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

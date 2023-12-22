@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.Email.dll
+D:\Project Git\ML\Build\ML.Utils.Email.pdb
+D:\Project Git\ML\ML.Utils.Email\obj\Release\ML.Utils.Email.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.Email\obj\Release\ML.Utils.Email.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Email\obj\Release\ML.Utils.Email.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.Email\obj\Release\ML.Utils.Email.dll
+D:\Project Git\ML\ML.Utils.Email\obj\Release\ML.Utils.Email.pdb

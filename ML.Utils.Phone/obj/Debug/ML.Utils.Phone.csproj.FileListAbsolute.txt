@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.Phone.dll
+D:\Project Git\ML\Build\ML.Utils.Phone.pdb
+D:\Project Git\ML\ML.Utils.Phone\obj\Debug\ML.Utils.Phone.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Phone\obj\Debug\ML.Utils.Phone.dll
+D:\Project Git\ML\ML.Utils.Phone\obj\Debug\ML.Utils.Phone.pdb
+D:\Project Git\ML\ML.Utils.Phone\obj\Debug\ML.Utils.Phone.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.Phone\obj\Debug\ML.Utils.Phone.csproj.CopyComplete

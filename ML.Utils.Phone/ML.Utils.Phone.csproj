@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5888BD3B-388B-4724-BACF-C3D08F4A4F21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ML.Utils.Phone</RootNamespace>
+    <AssemblyName>ML.Utils.Phone</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+	 <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+	 <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AvailablePhoneNumber.cs" />
+    <Compile Include="Entities\DeletePhoneResponse.cs" />
+    <Compile Include="Entities\GetPhoneNumberResponse.cs" />
+    <Compile Include="Extensions\PhoneManager.Plivio.cs" />
+    <Compile Include="Extensions\PhoneManager.Twilio.cs" />
+    <Compile Include="Entities\OrderPhoneResponse.cs" />
+    <Compile Include="PhoneManager.Phone.cs" />
+    <Compile Include="PhoneManager.SMS.cs" />
+    <Compile Include="Entities\Enums.cs" />
+    <Compile Include="Extensions\PhoneManager.Tropo.cs" />
+    <Compile Include="PhoneManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\SendSmsResponse.cs" />
+    <Compile Include="Entities\GetPhoneNumberRequest.cs" />
+    <Compile Include="Vendors\Plivo\Models\Account.cs" />
+    <Compile Include="Vendors\Plivo\Models\Application.cs" />
+    <Compile Include="Vendors\Plivo\Models\ApplicationList.cs" />
+    <Compile Include="Vendors\Plivo\Models\ApplicationMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\BaseRequest.cs" />
+    <Compile Include="Vendors\Plivo\Models\BaseResponse.cs" />
+    <Compile Include="Vendors\Plivo\Models\BuyPhoneNumberRequest.cs" />
+    <Compile Include="Vendors\Plivo\Models\BuyPhoneNumberResponse.cs" />
+    <Compile Include="Vendors\Plivo\Models\Call.cs" />
+    <Compile Include="Vendors\Plivo\Models\CDR.cs" />
+    <Compile Include="Vendors\Plivo\Models\CDRList.cs" />
+    <Compile Include="Vendors\Plivo\Models\CDRMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\Conference.cs" />
+    <Compile Include="Vendors\Plivo\Models\ConferenceMember.cs" />
+    <Compile Include="Vendors\Plivo\Models\Endpoint.cs" />
+    <Compile Include="Vendors\Plivo\Models\EndpointList.cs" />
+    <Compile Include="Vendors\Plivo\Models\EndpointMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\GetMessagesRequest.cs" />
+    <Compile Include="Vendors\Plivo\Models\GetMessagesResponse.cs" />
+    <Compile Include="Vendors\Plivo\Models\InboundSmsPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\InboundVoicePricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\IncomingCarrier.cs" />
+    <Compile Include="Vendors\Plivo\Models\IncomingCarrierList.cs" />
+    <Compile Include="Vendors\Plivo\Models\IncomingCarrierMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\LiveCall.cs" />
+    <Compile Include="Vendors\Plivo\Models\LiveCallList.cs" />
+    <Compile Include="Vendors\Plivo\Models\LiveConferenceList.cs" />
+    <Compile Include="Vendors\Plivo\Models\LocalInboundPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\LocalNumberRental.cs" />
+    <Compile Include="Vendors\Plivo\Models\LocalOutboundPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\Message.cs" />
+    <Compile Include="Vendors\Plivo\Models\MessageMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\Number.cs" />
+    <Compile Include="Vendors\Plivo\Models\NumberList.cs" />
+    <Compile Include="Vendors\Plivo\Models\NumberMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\NumberResponse.cs" />
+    <Compile Include="Vendors\Plivo\Models\NumberStatus.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutboundSmsPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutboundVoicePricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutgoingCarrier.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutgoingCarrierList.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutgoingCarrierMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutgoingCarrierRouting.cs" />
+    <Compile Include="Vendors\Plivo\Models\OutgoingCarrierRoutingList.cs" />
+    <Compile Include="Vendors\Plivo\Models\PhoneNumber.cs" />
+    <Compile Include="Vendors\Plivo\Models\PhoneNumberMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\PhoneNumbers.cs" />
+    <Compile Include="Vendors\Plivo\Models\PhoneNumberStatus.cs" />
+    <Compile Include="Vendors\Plivo\Models\PlivoPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\RatesPrefixes.cs" />
+    <Compile Include="Vendors\Plivo\Models\Record.cs" />
+    <Compile Include="Vendors\Plivo\Models\Recording.cs" />
+    <Compile Include="Vendors\Plivo\Models\RecordingList.cs" />
+    <Compile Include="Vendors\Plivo\Models\RecordingMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\ResourceListMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\SearchPhoneNumberRequest.cs" />
+    <Compile Include="Vendors\Plivo\Models\SearchPhoneNumberResponse.cs" />
+    <Compile Include="Vendors\Plivo\Models\SendMessageRequest.cs" />
+    <Compile Include="Vendors\Plivo\Models\SendMessageResponse.cs" />
+    <Compile Include="Vendors\Plivo\Models\SipInboundPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\SipOutboundPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\SmsRates.cs" />
+    <Compile Include="Vendors\Plivo\Models\SubAccount.cs" />
+    <Compile Include="Vendors\Plivo\Models\SubAccountList.cs" />
+    <Compile Include="Vendors\Plivo\Models\SubAccountMeta.cs" />
+    <Compile Include="Vendors\Plivo\Models\TollfreeInboundPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\TollfreeNumberRental.cs" />
+    <Compile Include="Vendors\Plivo\Models\TollfreeOutboundPricing.cs" />
+    <Compile Include="Vendors\Plivo\Models\VoiceRates.cs" />
+    <Compile Include="Vendors\Plivo\PlivoException.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Account.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Application.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Call.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Conference.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Endpoint.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.IncomingCarrier.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Message.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Number.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.OutgoingCarrier.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.OutgoingCarrierRouting.cs" />
+    <Compile Include="Vendors\Plivo\PlivoManager.Recording.cs" />
+    <Compile Include="Vendors\Plivo\PlivoSetting.cs" />
+    <Compile Include="Vendors\Plivo\Util.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Conference.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Dial.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\DTMF.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\GetDigits.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Hangup.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Message.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Number.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Play.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\PlivoElement.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\PreAnswer.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Record.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Redirect.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Response.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Speak.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\User.cs" />
+    <Compile Include="Vendors\Plivo\XmlElements\Wait.cs" />
+    <Compile Include="Vendors\Tropo\Entities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Vendors\Tropo\Structs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Vendors\Tropo\TropoException.cs" />
+    <Compile Include="Vendors\Tropo\TropoManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Vendors\Tropo\TropoSetting.cs" />
+    <Compile Include="Vendors\Tropo\Utilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Vendors\Twilio\Application.cs" />
+    <Compile Include="Vendors\Twilio\ApplicationOptions.cs" />
+    <Compile Include="Vendors\Twilio\ApplicationResult.cs" />
+    <Compile Include="Vendors\Twilio\AvailablePhoneNumber.cs" />
+    <Compile Include="Vendors\Twilio\AvailablePhoneNumberListRequest.cs" />
+    <Compile Include="Vendors\Twilio\AvailablePhoneNumberResult.cs" />
+    <Compile Include="Vendors\Twilio\Call.cs" />
+    <Compile Include="Vendors\Twilio\Core.cs" />
+    <Compile Include="Vendors\Twilio\DeleteStatus.cs" />
+    <Compile Include="Vendors\Twilio\IncomingPhoneNumber.cs" />
+    <Compile Include="Vendors\Twilio\IncomingPhoneNumberResult.cs" />
+    <Compile Include="Vendors\Twilio\Message.cs" />
+    <Compile Include="Vendors\Twilio\PhoneNumberOptions.cs" />
+    <Compile Include="Vendors\Twilio\Recording.cs" />
+    <Compile Include="Vendors\Twilio\SMSMessage.cs" />
+    <Compile Include="Vendors\Twilio\TwilioBase.cs" />
+    <Compile Include="Vendors\Twilio\TwilioException.cs" />
+    <Compile Include="Vendors\Twilio\TwilioListBase.cs" />
+    <Compile Include="Vendors\Twilio\TwilioManager.Call.cs" />
+    <Compile Include="Vendors\Twilio\TwilioManager.cs" />
+    <Compile Include="Vendors\Twilio\TwilioManager.Message.cs" />
+    <Compile Include="Vendors\Twilio\TwilioManager.PhoneNumber.cs" />
+    <Compile Include="Vendors\Twilio\TwilioManager.Recording.cs" />
+    <Compile Include="Vendors\Twilio\TwilioResultBase.cs" />
+    <Compile Include="Vendors\Twilio\TwilioSetting.cs" />
+    <Compile Include="Vendors\VendorManager.cs" />
+    <Compile Include="Vendors\VendorSetting.cs" />
+    <Compile Include="Vendors\Vitelity\Base\BaseResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Base\BaseVitelityRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Enums.cs" />
+    <Compile Include="Vendors\Vitelity\Extensions.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxChangeEmailRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxChangeEmailResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxGetDidRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxGetDidResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxListDidsRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxListDidsResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxListMyDidsRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxListMyDidsResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxListStatesRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\FaxListStatesResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\GetFaxRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\GetFaxResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\ListInComingFaxesRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\ListInComingFaxesResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\SendFaxRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\SendFaxResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\SentFaxStatusRequest.cs" />
+    <Compile Include="Vendors\Vitelity\Models\SentFaxStatusResponse.cs" />
+    <Compile Include="Vendors\Vitelity\Models\VitelityResponseXml.cs" />
+    <Compile Include="Vendors\Vitelity\VitelityException.cs" />
+    <Compile Include="Vendors\Vitelity\VitelityManager.cs" />
+    <Compile Include="Vendors\Vitelity\VitelitySetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ML.Common\ML.Common.csproj">
+      <Project>{c42a8f43-abe3-4ad2-9159-d06adfc1ebc2}</Project>
+      <Name>ML.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vendors\Twilio\TwilioManager.Application.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

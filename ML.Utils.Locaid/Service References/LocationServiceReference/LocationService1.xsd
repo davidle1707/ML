@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://webservice.asl.locaid.net/LocationService" xmlns:ns0="http://webservice.common.asl.locaid.net/" elementFormDefault="qualified" targetNamespace="http://webservice.asl.locaid.net/LocationService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="https://asl.loc-aid.com:443/ASLWS/LocationService?xsd=1" namespace="http://webservice.common.asl.locaid.net/" />
+  <xsd:element name="LocationDBRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="credentials" type="ns0:Credentials" />
+        <xsd:element name="locationParams" type="ns0:LocationParams" />
+        <xsd:element name="locationInfo" type="ns0:LocationInfo" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="LocationDBResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="transactionResponse" type="ns0:TransactionResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationWifiResponse" type="ns0:LocationWifiResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationXtremeResponse" type="ns0:LocationXtremeResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationXpressResponse" type="ns0:LocationXpressResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationXtraResponse" type="ns0:LocationXtraResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationAddressWifiResponse" type="ns0:LocationAddressWifiResponse" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="LocationPhoneRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="credentials" type="ns0:Credentials" />
+        <xsd:element name="locationParams" type="ns0:LocationParams" />
+        <xsd:element name="locationInfo" type="ns0:LocationInfo" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="LocationPhoneResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="transactionResponse" type="ns0:TransactionResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationXsResponse" type="ns0:LocationXsResponse" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="locationXtremeResponse" type="ns0:LocationXtremeResponse" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="trackingID" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

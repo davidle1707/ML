@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/PreValidationsWSDS.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/PreValidationsWSDS.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/PreValidationsWSDS.xsd" id="PreValidationsWSDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="PreValidationsWSDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CLIENTS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="LAST_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="FIRST_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="MIDDLE_INITIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="SOC_SEC_NUM" type="xs:string" />
+              <xs:element minOccurs="0" name="DATE_OF_BIRTH" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ADDRESS1" type="xs:string" />
+              <xs:element minOccurs="0" name="ADDRESS2" type="xs:string" />
+              <xs:element minOccurs="0" name="CITY" type="xs:string" />
+              <xs:element minOccurs="0" name="STATE" type="xs:string" />
+              <xs:element minOccurs="0" name="COUNTRY" type="xs:string" />
+              <xs:element minOccurs="0" name="ZIPCODE" type="xs:string" />
+              <xs:element minOccurs="0" name="PHONE_NUM" type="xs:string" />
+              <xs:element minOccurs="0" name="EMAIL_ADDR" type="xs:string" />
+              <xs:element minOccurs="0" name="ACTIVE_FLAG" type="xs:string" />
+              <xs:element minOccurs="0" name="CREATION_DATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="MODIFIED_DATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="MODIFIED_BY" type="xs:string" />
+              <xs:element minOccurs="0" name="STATUS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ERRORS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ERROR_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TABLE_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="TABLE_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="ROW_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="COLUMN_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR_TEXT" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="META_INFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="INFO_CLASS" type="xs:string" />
+              <xs:element minOccurs="0" name="INFO_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="INFO_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="VALUE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RESULTS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ACCEPTED_FLAG" type="xs:string" />
+              <xs:element minOccurs="0" name="RISK_DESCRIPTION" type="xs:string" />
+              <xs:element minOccurs="0" name="CORRECTION_PROCEDURE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

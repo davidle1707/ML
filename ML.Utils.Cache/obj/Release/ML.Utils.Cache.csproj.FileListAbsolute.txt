@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.Cache.dll
+D:\Project Git\ML\Build\ML.Utils.Cache.pdb
+D:\Project Git\ML\ML.Utils.Cache\obj\Release\ML.Utils.Cache.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.Cache\obj\Release\ML.Utils.Cache.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Cache\obj\Release\ML.Utils.Cache.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.Cache\obj\Release\ML.Utils.Cache.dll
+D:\Project Git\ML\ML.Utils.Cache\obj\Release\ML.Utils.Cache.pdb

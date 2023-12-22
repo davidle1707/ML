@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.webservice.asl.locaid.net/RegistrationService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://webservice.asl.locaid.net/RegistrationService" xmlns="http://schemas.xmlsoap.org/wsdl/" name="RegistrationService" targetNamespace="http://impl.webservice.asl.locaid.net/RegistrationService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://impl.webservice.asl.locaid.net/RegistrationService">
+      <xsd:import schemaLocation="https://asl.loc-aid.com:443/ASLWS/RegistrationService?xsd=2" namespace="http://webservice.asl.locaid.net/RegistrationService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="registerPhoneRequest">
+    <wsdl:part name="request" element="ns:RegisterPhoneRequest" />
+  </wsdl:message>
+  <wsdl:message name="registerPhoneResponse">
+    <wsdl:part name="response" element="ns:RegisterPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPhoneStatusRequest">
+    <wsdl:part name="request" element="ns:GetPhoneStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="getPhoneStatusResponse">
+    <wsdl:part name="response" element="ns:GetPhoneStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RegistrationServicePortType">
+    <wsdl:operation name="registerPhone">
+      <wsdl:input message="tns:registerPhoneRequest" />
+      <wsdl:output message="tns:registerPhoneResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPhoneStatus">
+      <wsdl:input message="tns:getPhoneStatusRequest" />
+      <wsdl:output message="tns:getPhoneStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegistrationServiceBinding" type="tns:RegistrationServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registerPhone">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhoneStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegistrationService">
+    <wsdl:port name="RegistrationServicePort" binding="tns:RegistrationServiceBinding">
+      <soap:address location="https://asl.loc-aid.com:443/ASLWS/RegistrationService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+D:\Project Git\ML\Build\ML.Utils.StructureMapService.dll
+D:\Project Git\ML\Build\ML.Utils.StructureMapService.pdb
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Debug\ML.Utils.StructureMapService.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Debug\ML.Utils.StructureMapService.dll
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Debug\ML.Utils.StructureMapService.pdb
+D:\Project Git\ML\ML.Utils.StructureMapService\obj\Debug\ML.Utils.StructureMapService.csprojResolveAssemblyReference.cache

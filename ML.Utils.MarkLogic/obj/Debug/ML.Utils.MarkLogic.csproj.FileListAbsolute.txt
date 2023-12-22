@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.MarkLogic.dll
+D:\Project Git\ML\Build\ML.Utils.MarkLogic.pdb
+D:\Project Git\ML\ML.Utils.MarkLogic\obj\Debug\ML.Utils.MarkLogic.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.MarkLogic\obj\Debug\ML.Utils.MarkLogic.dll
+D:\Project Git\ML\ML.Utils.MarkLogic\obj\Debug\ML.Utils.MarkLogic.pdb
+D:\Project Git\ML\ML.Utils.MarkLogic\obj\Debug\ML.Utils.MarkLogic.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.MarkLogic\obj\Debug\ML.Utils.MarkLogic.csproj.CopyComplete

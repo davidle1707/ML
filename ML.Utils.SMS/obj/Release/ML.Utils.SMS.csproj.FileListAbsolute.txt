@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.SMS.dll
+D:\Project Git\ML\Build\ML.Utils.SMS.pdb
+D:\Project Git\ML\ML.Utils.SMS\obj\Release\ML.Utils.SMS.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.SMS\obj\Release\ML.Utils.SMS.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.SMS\obj\Release\ML.Utils.SMS.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.SMS\obj\Release\ML.Utils.SMS.dll
+D:\Project Git\ML\ML.Utils.SMS\obj\Release\ML.Utils.SMS.pdb

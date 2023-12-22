@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://webservice.common.asl.locaid.net/" elementFormDefault="qualified" targetNamespace="http://webservice.common.asl.locaid.net/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Credentials">
+    <xsd:sequence>
+      <xsd:element name="login" type="xsd:string" />
+      <xsd:element name="password" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXtreme">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element name="appPhones" type="tns:LocationAppPhones" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ICID">
+    <xsd:sequence>
+      <xsd:element name="mcc" type="xsd:string" />
+      <xsd:element name="mnc" type="xsd:string" />
+      <xsd:element name="lac" type="xsd:string" />
+      <xsd:element name="cellid" type="xsd:string" />
+      <xsd:element minOccurs="0" name="ta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXpress">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="xpress" type="tns:ICID" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="WifiParams">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="mac" type="xsd:string" />
+      <xsd:element minOccurs="0" name="rssi" type="xsd:string" />
+      <xsd:element minOccurs="0" name="speed" type="xsd:string" />
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="WifiNeighResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="mac" type="xsd:string" />
+      <xsd:element minOccurs="0" name="rssi" type="xsd:string" />
+      <xsd:element minOccurs="0" name="speed" type="xsd:string" />
+      <xsd:element minOccurs="0" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Wifi">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="servCell" type="tns:WifiParams" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="neighCells" type="tns:WifiParams" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationWifi">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="wifi" type="tns:Wifi" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="WifiResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="servCell" type="tns:WifiNeighResponse" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="neighCells" type="tns:WifiNeighResponse" />
+      <xsd:element name="uncertainty" type="xsd:string" />
+      <xsd:element name="coordinateGeo" type="tns:CoordinateGeo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationWifiResponse">
+    <xsd:sequence>
+      <xsd:element name="locationMethod" type="xsd:string" />
+      <xsd:element name="wifiResponse" type="tns:WifiResponse" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationWifiCroupierResponse">
+    <xsd:sequence>
+      <xsd:element name="wifiResponse" type="tns:WifiResponse" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationComboWifi">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element name="classId" type="xsd:string" />
+          <xsd:element maxOccurs="unbounded" name="comboWifi" type="tns:ComboWifi" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ComboWifi">
+    <xsd:sequence>
+      <xsd:element name="wifi" type="tns:Wifi" />
+      <xsd:element name="msisdn" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationCombo">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element name="classId" type="xsd:string" />
+          <xsd:element maxOccurs="unbounded" name="combo" type="tns:Combo" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Combo">
+    <xsd:sequence>
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="xpress" type="tns:ICID" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationInfo">
+    <xsd:sequence />
+  </xsd:complexType>
+  <xsd:complexType name="TransactionResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="requestId" type="xsd:long" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="CoorTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DECIMAL" />
+      <xsd:enumeration value="DMS" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="StatusTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="OK" />
+      <xsd:enumeration value="ERROR" />
+      <xsd:enumeration value="NOT_FOUND" />
+      <xsd:enumeration value="FOUND" />
+      <xsd:enumeration value="IN_PROGRESS" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SyncTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="SYN" />
+      <xsd:enumeration value="ASYN" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UserTypeEnum">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DEVELOPER" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Response">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="status" type="tns:StatusTypeEnum" />
+      <xsd:element minOccurs="0" name="error" type="tns:Error" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Error">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="errorId" type="xsd:int" />
+      <xsd:element minOccurs="0" name="errorDesc" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CoordinateGeo">
+    <xsd:sequence>
+      <xsd:element name="coorType" type="tns:CoorTypeEnum" />
+      <xsd:element name="x" type="xsd:string" />
+      <xsd:element name="y" type="xsd:string" />
+      <xsd:element name="z" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Geometry">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="inRadius" type="xsd:double" />
+      <xsd:element minOccurs="0" name="outRadius" type="xsd:double" />
+      <xsd:element minOccurs="0" name="radius" type="xsd:double" />
+      <xsd:element minOccurs="0" name="startAngle" type="xsd:double" />
+      <xsd:element minOccurs="0" name="stopAngle" type="xsd:double" />
+      <xsd:element name="type" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationTime">
+    <xsd:sequence>
+      <xsd:element name="time" type="xsd:string" />
+      <xsd:element name="utc" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXtremeResponse">
+    <xsd:sequence>
+      <xsd:element name="coordinateGeo" type="tns:CoordinateGeo" />
+      <xsd:element name="direction" type="xsd:string" />
+      <xsd:element name="geometry" type="tns:Geometry" />
+      <xsd:element name="locationTime" type="tns:LocationTime" />
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="speed" type="xsd:string" />
+      <xsd:element name="locationMethod" type="xsd:string" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXpressResponse">
+    <xsd:sequence>
+      <xsd:element name="coordinateGeo" type="tns:CoordinateGeo" />
+      <xsd:element name="locationMethod" type="xsd:string" />
+      <xsd:element name="xpressResponse" type="tns:ICIDResponse" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="XpressICIDResponse">
+    <xsd:sequence>
+      <xsd:element name="icidResponse" type="tns:ICIDResponse" />
+      <xsd:element name="coordinateGeo" type="tns:CoordinateGeo" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationParams">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="age" type="xsd:string" />
+      <xsd:element name="coorType" type="tns:CoorTypeEnum" />
+      <xsd:element name="locationMethod" type="xsd:string" />
+      <xsd:element name="synType" type="tns:SyncTypeEnum" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PhoneStatus">
+    <xsd:sequence>
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ICIDResponse">
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:string" />
+      <xsd:element name="mcc" type="xsd:string" />
+      <xsd:element name="mnc" type="xsd:string" />
+      <xsd:element name="lac" type="xsd:string" />
+      <xsd:element name="cellid" type="xsd:string" />
+      <xsd:element name="ta" type="xsd:string" />
+      <xsd:element name="uncertainty" type="xsd:string" />
+      <xsd:element name="lastUpdate" type="xsd:string" />
+      <xsd:element name="invalid" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationAppPhones">
+    <xsd:sequence>
+      <xsd:element name="classId" type="xsd:string" />
+      <xsd:element maxOccurs="unbounded" name="msisdn" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RegistrationAppPhones">
+    <xsd:sequence>
+      <xsd:element name="classId" type="xsd:string" />
+      <xsd:element name="command" type="xsd:string" />
+      <xsd:element maxOccurs="unbounded" name="msisdn" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ClassIdPhoneStatus">
+    <xsd:sequence>
+      <xsd:element name="classId" type="xsd:string" />
+      <xsd:element name="subscription" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MsisdnPhoneStatus">
+    <xsd:sequence>
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="response" type="tns:Response" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="classIdPhoneStatus" type="tns:ClassIdPhoneStatus" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Xtra">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="profile" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="ip" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXtra">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element name="xtra" type="tns:Xtra" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXtraResponse">
+    <xsd:sequence>
+      <xsd:element name="locationMethod" type="xsd:string" />
+      <xsd:element minOccurs="1" name="ipInfo" type="tns:IpInfo" />
+      <xsd:element minOccurs="1" name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXtraCroupierResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="xtraIpInfo" type="tns:IpInfo" />
+      <xsd:element minOccurs="1" name="ipInfo" type="tns:IpInfo" />
+      <xsd:element minOccurs="1" name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IpInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="info" type="tns:InfoType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="network" type="tns:NetworkType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="location" type="tns:LocationType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InfoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="ipAddress" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ipType" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="anonymizerStatus" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="gds_error" type="tns:Error" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NetworkType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="organization" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="organizationData" type="tns:OrgDataType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="carrier" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="asn" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="connectionType" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="lineSpeed" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="ipRoutingType" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="domain" type="tns:DomainType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrgDataType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="home" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="organizationType" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="naicsCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="isicCode" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DomainType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="tld" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="sld" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="continent" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="coordinateGeo" type="tns:CoordinateGeo" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="countryData" type="tns:CountryDataType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="region" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="stateData" type="tns:StateDataType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="dma" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="msa" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="cityData" type="tns:CityDataType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CountryDataType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="countryCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="countryCf" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="StateDataType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="stateCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="stateCf" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CityDataType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="postalCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="timeZone" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="areaCode" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="cityCf" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="postalCodeCf" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="XsRequestType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="classId" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="msisdn" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="XsResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="lat" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="lon" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="hAccuracy" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vAccuracy" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="cached" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="sourceTs" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="speed" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="bearing" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="phoneDelay" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationComboXs">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element name="xs" type="tns:XsRequestType" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LocationXsResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="classId" type="xsd:string" />
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="locationMethod" type="xsd:string" />
+      <xsd:element minOccurs="1" name="xsResponse" type="tns:XsResponseType" />
+      <xsd:element minOccurs="1" name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationAddressWifi">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tns:LocationInfo">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="wifi" type="tns:Wifi" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AddressType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="city" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="country" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="county" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="stateName" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="streetName" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="streetNumber" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="zipCode" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AddressResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="address" type="tns:AddressType" />
+      <xsd:element minOccurs="1" name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationAddressWifiResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="locationWifiResponse" type="tns:LocationWifiResponse" />
+      <xsd:element minOccurs="1" name="addressResponse" type="tns:AddressResponseType" />
+      <xsd:element minOccurs="1" name="response" type="tns:Response" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="XploreParams">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="x" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="y" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

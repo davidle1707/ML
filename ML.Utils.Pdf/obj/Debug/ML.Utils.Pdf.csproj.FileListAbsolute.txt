@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.Pdf.dll
+D:\Project Git\ML\Build\ML.Utils.Pdf.pdb
+D:\Project Git\ML\ML.Utils.Pdf\obj\Debug\ML.Utils.Pdf.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Pdf\obj\Debug\ML.Utils.Pdf.dll
+D:\Project Git\ML\ML.Utils.Pdf\obj\Debug\ML.Utils.Pdf.pdb
+D:\Project Git\ML\ML.Utils.Pdf\obj\Debug\ML.Utils.Pdf.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.Pdf\obj\Debug\ML.Utils.Pdf.csproj.CopyComplete

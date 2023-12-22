@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A24988A6-721E-4C7D-B2E6-14D230226676}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ML.Utils.OnlineFantasyData</RootNamespace>
+    <AssemblyName>ML.Utils.OnlineFantasyData</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\References\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="ML.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Build\ML.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ML.Utils.ShareFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Build\ML.Utils.ShareFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\ProjectedPlayer.cs" />
+    <Compile Include="OnlineDataProvider.cs" />
+    <Compile Include="OnlineFantasyDataManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BaseDailyProjectionByJs.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BaseDailyProjectionResponse.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BaseDailyProjectionResponseByJs.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BasePlayerInfoByJs.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BaseDailyProjectionByHtml.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BaseDailyProjectionResponseByHtml.cs" />
+    <Compile Include="Providers\NumberFire\Inc\SiteReferInfo.cs" />
+    <Compile Include="Providers\NumberFire\Inc\BaseTeamInfoByJs.cs" />
+    <Compile Include="Providers\NumberFire\MlbHelper.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyBestPlayer.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyBestPlayerProjection.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyLineup.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyLineupMostLiked.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyLineupPlayer.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyLineupResponse.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyMostUsedPlayer.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyMostUsedPlayerSummary.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyProjection.cs" />
+    <Compile Include="Providers\NumberFire\MLB\DailyProjectionResponse.cs" />
+    <Compile Include="Providers\NumberFire\MLB\PlayerInfo.cs" />
+    <Compile Include="Providers\NumberFire\NbaHelper.cs" />
+    <Compile Include="Providers\NumberFire\NBA\DailyProjection.cs" />
+    <Compile Include="Providers\NumberFire\NBA\DailyProjectionResponse.cs" />
+    <Compile Include="Providers\NumberFire\NflHelper.cs" />
+    <Compile Include="Providers\NumberFire\NFL\DailyProjection.cs" />
+    <Compile Include="Providers\NumberFire\NFL\DailyProjectionResponse.cs" />
+    <Compile Include="Providers\NumberFire\NhlHelper.cs" />
+    <Compile Include="Providers\NumberFire\NHL\DailyProjection.cs" />
+    <Compile Include="Providers\NumberFire\NHL\DailyProjectionResponse.cs" />
+    <Compile Include="Providers\NumberFire\__BaseHelper.cs" />
+    <Compile Include="Providers\Constants.cs" />
+    <Compile Include="Providers\NumberFireProvider.cs" />
+    <Compile Include="Providers\NumberFire\__BaseHelperByHtml.cs" />
+    <Compile Include="Providers\NumberFire\__BaseHelperByJs.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

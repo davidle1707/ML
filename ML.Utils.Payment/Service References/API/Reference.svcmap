@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f75ee922-f635-491a-ac0e-ae4f03d7f002" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://websvctest.trans2pay.com/v3.0/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DebitInfoWSDS.xsd" MetadataType="Schema" ID="270cdf72-b725-487a-8c3e-b01b27da8e9a" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=DebitInfoWSDS" />
+    <MetadataFile FileName="PaymentInfoWSDS.xsd" MetadataType="Schema" ID="ebcb712c-1c69-4733-9e45-c563b7436952" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=PaymentInfoWSDS" />
+    <MetadataFile FileName="DebitsWSDS.xsd" MetadataType="Schema" ID="1ceb782a-54c4-435c-b06b-cb863810cea5" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=DebitsWSDS" />
+    <MetadataFile FileName="StatesWSDS.xsd" MetadataType="Schema" ID="052e5ed5-dbf8-414a-bb10-5edc35072b25" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=StatesWSDS" />
+    <MetadataFile FileName="PreValidationsWSDS.xsd" MetadataType="Schema" ID="19db4443-f4f2-477d-a631-7bcada4efba2" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=PreValidationsWSDS" />
+    <MetadataFile FileName="DepositsWSDS.xsd" MetadataType="Schema" ID="64946960-45a4-4ea5-a647-8473d3d97a8e" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=DepositsWSDS" />
+    <MetadataFile FileName="BanksWSDS.xsd" MetadataType="Schema" ID="8768a0c3-d896-47ae-aa05-32aac8e4ecaf" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=BanksWSDS" />
+    <MetadataFile FileName="TransactionsWSDS.xsd" MetadataType="Schema" ID="263858dd-1641-46bf-9965-8e796129dc1e" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=TransactionsWSDS" />
+    <MetadataFile FileName="PolicyGroupsWSDS.xsd" MetadataType="Schema" ID="8e2cdfd0-2f37-42aa-b3dd-a0a4a2c096ed" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=PolicyGroupsWSDS" />
+    <MetadataFile FileName="PayeesListWSDS.xsd" MetadataType="Schema" ID="ad5b56eb-c2d9-4b3d-803d-c5be55bce2c7" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=PayeesListWSDS" />
+    <MetadataFile FileName="ClientsListWSDS.xsd" MetadataType="Schema" ID="37f3937a-922e-4071-8fee-094b703b7a2e" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=ClientsListWSDS" />
+    <MetadataFile FileName="NotesWSDS.xsd" MetadataType="Schema" ID="8868f8df-d46a-4119-a2ec-e5694d87738b" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=NotesWSDS" />
+    <MetadataFile FileName="ClientsWSDS.xsd" MetadataType="Schema" ID="eba8f706-e1ce-466f-8975-d184b5e09ed4" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=ClientsWSDS" />
+    <MetadataFile FileName="BankAccountTypesWSDS.xsd" MetadataType="Schema" ID="efcd8d9e-3bb8-42e9-a1a2-95c7211b055e" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=BankAccountTypesWSDS" />
+    <MetadataFile FileName="PaymentsWSDS.xsd" MetadataType="Schema" ID="b93151fc-17c1-4f78-b43a-930bb44087a5" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=PaymentsWSDS" />
+    <MetadataFile FileName="AccountsWSDS.xsd" MetadataType="Schema" ID="0b7d9d4a-c1fa-49e5-94ec-7639c610dfdd" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=AccountsWSDS" />
+    <MetadataFile FileName="PayeesWSDS.xsd" MetadataType="Schema" ID="b60b7d4f-d48c-438e-82c2-c7570b367b6b" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=PayeesWSDS" />
+    <MetadataFile FileName="Webservices.wsdl" MetadataType="Wsdl" ID="396972fd-2190-4707-8ce2-b2a300a5f5a6" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?wsdl" />
+    <MetadataFile FileName="Webservices.disco" MetadataType="Disco" ID="9a12142f-0d38-4428-92d2-ec25f3d261ae" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?disco" />
+    <MetadataFile FileName="BankHolidaysWSDS.xsd" MetadataType="Schema" ID="430ff2be-b92e-47df-bc93-0a9b313ab374" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=BankHolidaysWSDS" />
+    <MetadataFile FileName="NsfStatusWSDS.xsd" MetadataType="Schema" ID="c70ab9a2-965a-400b-ab8f-dfb3fecf5e5b" SourceId="1" SourceUrl="https://websvctest.trans2pay.com/v3.0/Webservices.asmx?schema=NsfStatusWSDS" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

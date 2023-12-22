@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.ShareFile.dll
+D:\Project Git\ML\Build\ML.Utils.ShareFile.pdb
+D:\Project Git\ML\ML.Utils.ShareFile\obj\Debug\ML.Utils.ShareFile.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.ShareFile\obj\Debug\ML.Utils.ShareFile.dll
+D:\Project Git\ML\ML.Utils.ShareFile\obj\Debug\ML.Utils.ShareFile.pdb
+D:\Project Git\ML\ML.Utils.ShareFile\obj\Debug\ML.Utils.ShareFile.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.ShareFile\obj\Debug\ML.Utils.ShareFile.csproj.CopyComplete

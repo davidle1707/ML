@@ -1,0 +1,7 @@
+D:\Project Git\ML\Build\ML.Utils.MongoDb.dll
+D:\Project Git\ML\Build\ML.Utils.MongoDb.pdb
+D:\Project Git\ML\ML.Utils.MongoDb\obj\Release\ML.Utils.MongoDb.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.MongoDb\obj\Release\ML.Utils.MongoDb.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.MongoDb\obj\Release\ML.Utils.MongoDb.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.MongoDb\obj\Release\ML.Utils.MongoDb.dll
+D:\Project Git\ML\ML.Utils.MongoDb\obj\Release\ML.Utils.MongoDb.pdb

@@ -1,0 +1,6 @@
+D:\Project Git\ML\Build\ML.Utils.Cache.dll
+D:\Project Git\ML\Build\ML.Utils.Cache.pdb
+D:\Project Git\ML\ML.Utils.Cache\obj\Debug\ML.Utils.Cache.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.Cache\obj\Debug\ML.Utils.Cache.dll
+D:\Project Git\ML\ML.Utils.Cache\obj\Debug\ML.Utils.Cache.pdb
+D:\Project Git\ML\ML.Utils.Cache\obj\Debug\ML.Utils.Cache.csprojResolveAssemblyReference.cache

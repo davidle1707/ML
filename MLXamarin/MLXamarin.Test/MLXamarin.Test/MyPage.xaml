@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:mlcontrols="clr-namespace:MLXamarin.Controls;assembly=MLXamarin.Controls" 
+		x:Class="MLXamarin.Test.MyPage">
+	<ContentPage.Content>
+
+		<mlcontrols:CustomTimePicker HasBorder="true"/>
+		<mlcontrols:CustomTimePicker HasBorder="false"/>
+	</ContentPage.Content>
+</ContentPage>

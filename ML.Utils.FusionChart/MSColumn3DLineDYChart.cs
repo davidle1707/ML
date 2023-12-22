@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ML.Utils.FusionChart.Abstract;
+using ML.Utils.FusionChart.PropertySet;
+using ML.Utils.FusionChart.Attribute;
+
+namespace ML.Utils.FusionChart
+{
+    [Graph]
+    public sealed class MSColumn3DLineDYChart : MultiSeriesChart, ICombinationChart
+    {
+        public MSColumn3DLineDYChart()
+        {
+            this.AxisTitles = new AxisTitlesPropertySet();
+            this.Canvas3D = new Canvas3DPropertySet();
+            this.ChartNumericalLimits = new ChartNumericalLimitsPropertySet();
+            this.GenericMSVisibility = new GenericMSVisibilityPropertySet();
+            this.BarsVisibility = new BarsVisibilityPropertySet();
+            this.FontBase = new FontBasePropertySet();
+            this.FontOutCanvas = new FontOutCanvasPropertySet();
+            this.NumberFormat = new NumberFormatPropertySet();
+            this.BarsNumberFormat = new BarsNumberFormatPropertySet();
+            this.ZeroPlane3D = new ZeroPlane3DPropertySet();
+            this.HDivisionalLines = new HDivisionalLinesPropertySet();
+            this.HoverCaption = new HoverCaptionPropertySet();
+            this.ChartMargins = new ChartMarginsPropertySet();
+        }
+
+        public AxisTitlesPropertySet AxisTitles { get; set; }
+        public Canvas3DPropertySet Canvas3D { get; set; }
+        public ChartNumericalLimitsPropertySet ChartNumericalLimits { get; set; }
+        public GenericMSVisibilityPropertySet GenericMSVisibility { get; set; }
+        public BarsVisibilityPropertySet BarsVisibility { get; set; }
+        public FontBasePropertySet FontBase { get; set; }
+        public FontOutCanvasPropertySet FontOutCanvas { get; set; }
+        public NumberFormatPropertySet NumberFormat { get; set; }
+        public BarsNumberFormatPropertySet BarsNumberFormat { get; set; }
+        public ZeroPlane3DPropertySet ZeroPlane3D { get; set; }
+        public HDivisionalLinesPropertySet HDivisionalLines { get; set; }
+        public HoverCaptionPropertySet HoverCaption { get; set; }
+        public ChartMarginsPropertySet ChartMargins { get; set; }
+
+        private Dictionary<String, CombinationAxisType> dataSetType;
+        public void SetAxisType(String dataSetName, CombinationAxisType axisType)
+        {
+            if (this.dataSetType == null)
+                this.dataSetType = new Dictionary<String, CombinationAxisType>();
+
+            if (this.dataSetType.Keys.Contains(dataSetName))
+                this.dataSetType[dataSetName] = axisType;
+            else
+                this.dataSetType.Add(dataSetName, axisType);
+
+        }
+
+        public Dictionary<String, CombinationAxisType> GetAxisTypeDictionary()
+        {
+            return this.dataSetType;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+D:\Project Git\ML\Build\ML.Utils.DocuSign.dll.config
+D:\Project Git\ML\Build\ML.Utils.DocuSign.dll
+D:\Project Git\ML\Build\ML.Utils.DocuSign.pdb
+D:\Project Git\ML\ML.Utils.DocuSign\obj\Release\ML.Utils.DocuSign.csprojAssemblyReference.cache
+D:\Project Git\ML\ML.Utils.DocuSign\obj\Release\ML.Utils.DocuSign.csproj.CoreCompileInputs.cache
+D:\Project Git\ML\ML.Utils.DocuSign\obj\Release\ML.Utils.DocuSign.csproj.CopyComplete
+D:\Project Git\ML\ML.Utils.DocuSign\obj\Release\ML.Utils.DocuSign.dll
+D:\Project Git\ML\ML.Utils.DocuSign\obj\Release\ML.Utils.DocuSign.pdb
